@@ -88,7 +88,19 @@ The model achieves high accuracy on both the training and test sets, indicating 
 
 ### Model 4
 
-[Provide a brief description of Model 2 architecture and its key features]
+[Target:
+
+Reduce the number of parameters while maintaining the model performance.
+Introduce Global Average Pooling (GAP) and remove the last BIG kernel.
+Results:
+Parameters: 11,312
+Best Train Accuracy: 99.28
+Best Test Accuracy: 99.37
+Analysis:
+The model architecture has been modified with the introduction of Global Average Pooling (GAP) and the removal of the last BIG kernel.
+Despite the changes, the number of parameters has slightly increased compared to Model 2 (10,970 parameters). This increase can be attributed to the additional convolutional layers and the increased number of channels in some layers.
+However, the model still maintains high accuracy on both the training and test sets, indicating good performance.
+The use of GAP helps in reducing the spatial dimensions of the feature maps while retaining the important features, providing a more robust feature representation.
 
 ### Model 5
 
