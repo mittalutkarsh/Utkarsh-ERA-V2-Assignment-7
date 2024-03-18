@@ -54,7 +54,33 @@ We observe some slight overfitting, as the train accuracy reaches 100% while the
 
 ### Model 2
 
-[Provide a brief description of Model 2 architecture and its key features]
+#### Target:
+
+Reduce the number of parameters while maintaining the model performance.
+Introduce batch normalization and dropout for regularization.
+#### Results:
+Parameters: 10,970
+Best Train Accuracy: 99.87
+Best Test Accuracy: 99.20
+#### Analysis:
+The model architecture is optimized, resulting in a significant reduction in the number of parameters compared to Model 1.
+The inclusion of batch normalization and dropout helps in regularizing the model and improving its generalization ability.
+The model achieves high accuracy on both the training and test sets, indicating good performance and reduced overfitting.
+
+| Layer              | Kernel Size | Stride | Padding | Receptive Field |
+|--------------------|-------------|--------|---------|-----------------|
+| Input              | -           | -      | -       | 1x1             |
+| Layer 1 (Conv2d)   | 3           | 1      | 1       | 3x3             |
+| Layer 2 (Conv2d)   | 3           | 1      | 1       | 5x5             |
+| Layer 3 (Conv2d)   | 3           | 1      | 1       | 7x7             |
+| Layer 4 (MaxPool2d)| 2           | 2      | 0       | 8x8             |
+| Layer 5 (Conv2d)   | 1           | 1      | 0       | 8x8             |
+| Layer 6 (Conv2d)   | 3           | 1      | 1       | 12x12           |
+| Layer 7 (Conv2d)   | 3           | 1      | 1       | 16x16           |
+| Layer 8 (MaxPool2d)| 2           | 2      | 0       | 18x18           |
+| Layer 9 (Conv2d)   | 1           | 1      | 0       | 18x18           |
+| Layer 10 (Conv2d)  | 7           | 1      | 0       | 36x36           |
+
 
 ### Model 3
 
