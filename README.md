@@ -196,7 +196,40 @@ The model architecture is optimized by reducing the number of channels in the in
 
 ### Model 7
 
-[Provide a brief description of Model 2 architecture and its key features]
+#### Target
+
+- Optimize the model architecture for better performance.
+- Incorporate adaptive average pooling for flexible input sizes.
+- Utilize an adaptive learning rate scheduler for improved convergence.
+
+#### Results
+
+- **Parameters:** 7,568
+- **Best Train Accuracy:** 98.59%
+- **Best Test Accuracy:** 99.11%
+-  **No of EPOCHS used:** 15
+
+#### Analysis
+
+- The model architecture is optimized, resulting in improved performance compared to the previous models.
+- The incorporation of adaptive average pooling allows the model to handle input images of varying sizes, making it more versatile.
+- The use of an adaptive learning rate scheduler helps in achieving better convergence during training.
+- The model maintains a good balance between training and test accuracy, indicating effective generalization.
+
+#### Receptive Field Calculation
+
+| Layer                  | Kernel Size | Stride | Padding | Receptive Field |
+|------------------------|-------------|--------|---------|-----------------|
+| Input                  | -           | -      | -       | 1x1             |
+| Layer 1 (Conv2d)       | 3           | 1      | 0       | 3x3             |
+| Layer 2 (Conv2d)       | 3           | 1      | 0       | 5x5             |
+| Layer 3 (Conv2d)       | 1           | 1      | 0       | 5x5             |
+| Layer 4 (MaxPool2d)    | 2           | 2      | 0       | 6x6             |
+| Layer 5 (Conv2d)       | 3           | 1      | 0       | 10x10           |
+| Layer 6 (Conv2d)       | 3           | 1      | 0       | 14x14           |
+| Layer 7 (AdaptiveAvgPool2d) | -     | -      | -       | 14x14           |
+| Layer 8 (Conv2d)       | 1           | 1      | 0       | 14x14           |
+
 
 ### Model 8
 
