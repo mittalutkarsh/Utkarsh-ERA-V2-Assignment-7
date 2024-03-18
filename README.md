@@ -119,7 +119,37 @@ The use of GAP helps in reducing the spatial dimensions of the feature maps whil
 
 ### Model 5
 
-[Provide a brief description of Model 2 architecture and its key features]
+#### Target
+
+- Reduce the number of parameters while maintaining the model performance.
+- Use a smaller number of channels in the initial convolutional layers.
+
+#### Results
+
+- **Parameters:** 9,400 (No of EPOCHS used 20)
+- **Best Train Accuracy:** 99.21%
+- **Best Test Accuracy:** 99.40%
+
+#### Analysis
+
+The model architecture is optimized by reducing the number of channels in the initial convolutional layers, resulting in a significant reduction of parameters compared to the previous models. Despite the reduction in parameters, the model maintains high accuracy on both the training and test sets. The use of a smaller number of channels in the initial layers helps in reducing the computational complexity while still capturing the important features. The model demonstrates good generalization ability, as evidenced by the high test accuracy.
+
+## Receptive Field Calculation
+
+| Layer             | Kernel Size | Stride | Padding | Receptive Field |
+|-------------------|-------------|--------|---------|-----------------|
+| Input             | -           | -      | -       | 1x1             |
+| Layer 1 (Conv2d)  | 3           | 1      | 0       | 3x3             |
+| Layer 2 (Conv2d)  | 3           | 1      | 0       | 5x5             |
+| Layer 3 (Conv2d)  | 1           | 1      | 0       | 5x5             |
+| Layer 4 (MaxPool2d)| 2          | 2      | 0       | 6x6             |
+| Layer 5 (Conv2d)  | 3           | 1      | 0       | 10x10           |
+| Layer 6 (Conv2d)  | 3           | 1      | 0       | 14x14           |
+| Layer 7 (Conv2d)  | 3           | 1      | 0       | 18x18           |
+| Layer 8 (Conv2d)  | 3           | 1      | 1       | 20x20           |
+| Layer 9 (AvgPool2d)| 6          | 1      | 0       | 32x32           |
+| Layer 10 (Conv2d) | 1           | 1      | 0       | 32x32           |
+
 
 ### Model 6
 
