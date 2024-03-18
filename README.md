@@ -24,7 +24,33 @@ In this project, we experiment with 8 different CNN architectures to explore the
 
 ### Model 1
 
-[Provide a brief description of Model 1 architecture and its key features]
+#### Target:
+
+Get the basic skeleton right. We will try and avoid changing this skeleton as much as possible.
+No fancy stuff
+#### Results:
+Parameters: 6,379,786
+Best Train Accuracy: 100.00
+Best Test Accuracy: 99.21
+#### Analysis:
+The model is quite large, but it is working well.
+We observe some slight overfitting, as the train accuracy reaches 100% while the test accuracy is slightly lower.
+
+| Layer             | Kernel Size | Stride | Padding | Receptive Field |
+|-------------------|-------------|--------|---------|-----------------|
+| Input             | -           | -      | -       | 1x1             |
+| Layer 1 (Conv2d)  | 3           | 1      | 1       | 3x3             |
+| Layer 2 (Conv2d)  | 3           | 1      | 1       | 5x5             |
+| Layer 3 (MaxPool2d)| 2         | 2      | 0       | 6x6             |
+| Layer 4 (Conv2d)  | 3           | 1      | 1       | 10x10           |
+| Layer 5 (Conv2d)  | 3           | 1      | 1       | 14x14           |
+| Layer 6 (MaxPool2d)| 2         | 2      | 0       | 16x16           |
+| Layer 7 (Conv2d)  | 3           | 1      | 0       | 24x24           |
+| Layer 8 (Conv2d)  | 3           | 1      | 0       | 32x32           |
+| Layer 9 (Conv2d)  | 3           | 1      | 0       | 40x40           |
+
+
+
 
 ### Model 2
 
