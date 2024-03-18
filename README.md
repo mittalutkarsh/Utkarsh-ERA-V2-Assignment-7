@@ -157,7 +157,42 @@ The model architecture is optimized by reducing the number of channels in the in
 
 ### Model 6
 
-[Provide a brief description of Model 2 architecture and its key features]
+#### Target
+
+- Introduce image augmentation techniques to improve model generalization.
+- Reduce the number of epochs to 15 while maintaining model performance.
+- Further optimize the model architecture to reduce the number of parameters.
+
+#### Results
+
+- **Parameters:** 9,256
+- **Best Train Accuracy:** 98.65%
+- **Best Test Accuracy:** 99.06%
+-  **No of EPOCHS used:** 15
+
+#### Analysis
+
+- The model incorporates image augmentation techniques, which helps in improving the model's ability to generalize well to unseen data.
+- Despite reducing the number of epochs to 15, the model maintains high performance, indicating efficient learning and convergence.
+- The model architecture is further optimized, resulting in a reduction of parameters compared to the previous models.
+- The model achieves a good balance between training and test accuracy, suggesting reduced overfitting and improved generalization.
+
+#### Receptive Field Calculation
+
+| Layer             | Kernel Size | Stride | Padding | Receptive Field |
+|-------------------|-------------|--------|---------|-----------------|
+| Input             | -           | -      | -       | 1x1             |
+| Layer 1 (Conv2d)  | 3           | 1      | 0       | 3x3             |
+| Layer 2 (Conv2d)  | 3           | 1      | 0       | 5x5             |
+| Layer 3 (Conv2d)  | 1           | 1      | 0       | 5x5             |
+| Layer 4 (MaxPool2d)| 2          | 2      | 0       | 6x6             |
+| Layer 5 (Conv2d)  | 3           | 1      | 0       | 10x10           |
+| Layer 6 (Conv2d)  | 3           | 1      | 0       | 14x14           |
+| Layer 7 (Conv2d)  | 3           | 1      | 0       | 18x18           |
+| Layer 8 (Conv2d)  | 3           | 1      | 1       | 20x20           |
+| Layer 9 (AvgPool2d)| 6          | 1      | 0       | 32x32           |
+| Layer 10 (Conv2d) | 1           | 1      | 0       | 32x32           |
+
 
 ### Model 7
 
