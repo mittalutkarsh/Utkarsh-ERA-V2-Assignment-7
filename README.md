@@ -233,12 +233,51 @@ The model architecture is optimized by reducing the number of channels in the in
 
 ### Model 8
 
-[Provide a brief description of Model 8 architecture and its key features]
+#### Target
+
+- Utilize LeakyReLU activation function for improved model performance.
+- Adjust the model architecture by adding an additional convolutional block.
+- Increase the batch size to 32 for faster training.
+- Modify the learning rate scheduler for better convergence.
+
+#### Results
+
+- **Parameters:** 7,792
+- **Best Train Accuracy:** 99.41%
+- **Best Test Accuracy:** 99.32%
+
+#### Analysis
+
+- The use of LeakyReLU activation function helps in improving the model's performance by mitigating the vanishing gradient problem.
+- The addition of an extra convolutional block enhances the model's capacity to learn more complex features.
+- Increasing the batch size to 32 allows for faster training while still maintaining good performance.
+- The modified learning rate scheduler enables better convergence during the training process.
+- The model achieves high accuracy on both the training and test sets, indicating its effectiveness in classification tasks.
+
+#### Receptive Field Calculation
+
+| Layer                  | Kernel Size | Stride | Padding | Receptive Field |
+|------------------------|-------------|--------|---------|-----------------|
+| Input                  | -           | -      | -       | 1x1             |
+| Layer 1 (Conv2d)       | 3           | 1      | 0       | 3x3             |
+| Layer 2 (Conv2d)       | 3           | 1      | 0       | 5x5             |
+| Layer 3 (Conv2d)       | 1           | 1      | 0       | 5x5             |
+| Layer 4 (MaxPool2d)    | 2           | 2      | 0       | 6x6             |
+| Layer 5 (Conv2d)       | 3           | 1      | 0       | 10x10           |
+| Layer 6 (Conv2d)       | 3           | 1      | 0       | 14x14           |
+| Layer 7 (Conv2d)       | 3           | 1      | 0       | 18x18           |
+| Layer 8 (AdaptiveAvgPool2d) | -     | -      | -       | 18x18           |
+| Layer 9 (Conv2d)       | 1           | 1      | 0       | 18x18           |
+
+<img width="680" alt="Pasted Graphic" src="https://github.com/mittalutkarsh/Utkarsh-ERA-V2-Assignment-7/assets/36775837/1340820e-c8ab-4e8d-9b50-842437228ab0">
 
 
-## Results
+## Conclusion
 
-[Provide a summary of the results obtained from the experiments, including the final train and test accuracies for each model]
+Best Model - Model 8
+No of Parameters - 7792
+Test Accuracy - 99.32
+No of Epochs used - 15
 
 ## Usage
 
