@@ -32,6 +32,7 @@ No fancy stuff
 Parameters: 6,379,786
 Best Train Accuracy: 100.00
 Best Test Accuracy: 99.21
+- **No of EPOCHS used:** 20
 #### Analysis:
 The model is quite large, but it is working well.
 We observe some slight overfitting, as the train accuracy reaches 100% while the test accuracy is slightly lower.
@@ -62,6 +63,7 @@ Introduce batch normalization and dropout for regularization.
 Parameters: 10,970
 Best Train Accuracy: 99.87
 Best Test Accuracy: 99.20
+- **No of EPOCHS used:** 20
 #### Analysis:
 The model architecture is optimized, resulting in a significant reduction in the number of parameters compared to Model 1.
 The inclusion of batch normalization and dropout helps in regularizing the model and improving its generalization ability.
@@ -96,6 +98,7 @@ Introduce Global Average Pooling (GAP) and remove the last BIG kernel.
 Parameters: 11,312
 Best Train Accuracy: 99.28
 Best Test Accuracy: 99.30
+- **No of EPOCHS used:** 20
 #### Analysis:
 The model architecture has been modified with the introduction of Global Average Pooling (GAP) and the removal of the last BIG kernel.
 Despite the changes, the number of parameters has slightly increased compared to Model 2 (10,970 parameters). This increase can be attributed to the additional convolutional layers and the increased number of channels in some layers.
@@ -126,9 +129,10 @@ The use of GAP helps in reducing the spatial dimensions of the feature maps whil
 
 #### Results
 
-- **Parameters:** 9,400 (No of EPOCHS used 20)
+- **Parameters:** 9,400 
 - **Best Train Accuracy:** 99.21%
 - **Best Test Accuracy:** 99.40%
+- **No of EPOCHS used:** 20
 
 #### Analysis
 
