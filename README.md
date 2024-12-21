@@ -1,4 +1,4 @@
-# Utkarsh-ERA-V2-Assignment-7
+# Utkarsh-ERA-V3-Assignment-7
 Assignment 7
 # MNIST Digit Classification using Convolutional Neural Networks (CNNs)
 
